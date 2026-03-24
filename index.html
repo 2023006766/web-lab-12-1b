@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+
+    <!-- Add AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+    <div ng-controller="myController">
+
+        <h2>Counter Example</h2>
+
+        <!-- Button -->
+        <button ng-click="count = count + 1">
+            Click Me
+        </button>
+
+        <!-- Display Count -->
+        <p>Count: {{count}}</p>
+
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myController", function($scope) {
+            $scope.count = 0;   // starting value
+        });
+    </script>
+
+</body>
+</html>
